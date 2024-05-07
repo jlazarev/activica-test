@@ -1,0 +1,179 @@
+.loan {
+  background-color: $color-grey-light;
+
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    @include viewport--768 {
+      width: 420px;
+      height: 420px;
+      right: -220px;
+      top: 31px;
+    }
+
+    content: "";
+
+    position: absolute;
+    bottom: 362px;
+    right: 20px;
+    width: 202px;
+    height: 202px;
+    background-color: $color-red;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &::before {
+    @include viewport--768 {
+      width: 373px;
+      height: 210px;
+      right: 7px;
+      bottom: 373px;
+    }
+
+    content: "";
+    position: absolute;
+    bottom: 379px;
+    right: 87px;
+    width: 273px;
+    height: 160px;
+    background-image: url("../img/bg/bg-auto.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 1;
+  }
+}
+
+.loan__wrapper {
+  @include viewport--768 {
+    padding-bottom: 90px;
+  }
+
+  padding: 20px 20px 60px;
+}
+
+.loan__title {
+  @include viewport--768 {
+    font-size: 40px;
+    margin: 27px 120px 0 0;
+  }
+
+  margin: 0;
+  font-family: "Georgia", sans-serif;
+  font-weight: 700;
+  line-height: 1.13em;
+  font-size: 30px;
+}
+
+.loan__features {
+  @include viewport--768 {
+    margin: 30px 0 39px;
+  }
+
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+
+  li {
+    @include viewport--768 {
+      margin-right: 260px;
+    }
+
+    position: relative;
+    padding-left: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-grey;
+    margin-bottom: 16px;
+    letter-spacing: -0.004em;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+}
+
+.loan__btn {
+  @include viewport--768 {
+    width: 281px;
+    margin-bottom: 90px;
+  }
+
+  margin-bottom: 292px;
+}
+
+.loan__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  counter-reset: myCounter;
+  margin-right: -20px;
+  position: relative;
+  z-index: 1;
+
+  overflow: auto;
+}
+
+.loan__step {
+  @include viewport--768 {
+    width: 300px;
+    height: 219px;
+    padding: 40px 45px 38px 40px;
+  }
+
+  background-color: $color-default-white;
+  border-radius: 20px;
+  padding: 40px 40px 38px;
+  width: 235px;
+  height: 242px;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 45px;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  display: flex;
+  align-items: flex-end;
+
+  &:last-child {
+    margin-right: 20px;
+    background-color: $color-default-black;
+    color: $color-default-white;
+
+    &::after {
+      color: $color-default-black;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "0" counter(myCounter);
+    counter-increment: myCounter;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-yellow;
+    font-weight: 600;
+    font-size: 18px;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+
+  svg {
+    position: absolute;
+    top: calc(50% - 13px);
+    right: -30px;
+  }
+}

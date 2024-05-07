@@ -1,0 +1,91 @@
+.appraiser {
+  @include viewport--768 {
+    padding: 90px 20px 0;
+  }
+
+  padding: 60px 20px 0;
+}
+
+.appraiser__wrapper {
+  @include viewport--768 {
+    padding: 40px 130px 391px 40px;
+  }
+
+  background-color: $color-grey-light;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 253px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    @include viewport--768 {
+      width: 544px;
+      height: 544px;
+      bottom: -195px;
+      left: -53px;
+    }
+
+    content: "";
+    position: absolute;
+    background-color: $color-red;
+    width: 297px;
+    height: 297px;
+    border-radius: 50%;
+    bottom: -74px;
+    left: -54px;
+    z-index: 0;
+  }
+
+  &::before {
+    @include viewport--768 {
+      width: 448px;
+      height: 261px;
+      bottom: 48px;
+      left: 104px;
+    }
+
+    content: "";
+    position: absolute;
+    bottom: 22px;
+    left: 43px;
+    width: 277px;
+    height: 172px;
+    background-image: url("../img/bg/bg-auto2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.appraiser__title {
+  @include viewport--768 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  font-family: "Georgia", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 122%;
+  margin: 0;
+  margin-bottom: 31px;
+}
+
+.appraiser__paragraph {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 128%;
+  color: $color-grey;
+  margin-bottom: 15px;
+  letter-spacing: -0.004em;
+}
+
+.appraiser__btn {
+  @include viewport--768 {
+    width: 228px;
+  }
+
+  margin-top: 14px;
+}
