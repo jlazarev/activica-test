@@ -3,6 +3,10 @@
     margin-bottom: 37px;
   }
 
+  @include viewport--1200 {
+    width: 31.1%;
+  }
+
   position: relative;
   margin-bottom: 17px;
 

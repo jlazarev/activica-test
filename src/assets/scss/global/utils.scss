@@ -75,10 +75,7 @@ img {
 
 .btn {
   @include viewport--1920 {
-    height: 51px;
     padding: 0 20px;
-
-    font-size: 14px;
 
     border-radius: 8px;
   }

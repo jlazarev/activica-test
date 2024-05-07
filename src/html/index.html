@@ -142,68 +142,72 @@
             </h2>
 
             <form class="calculator__form" action="#" method="post">
-              <div class="range-slider">
-                <h3 class="range-slider__title">Рыночная стоимость автомобиля</h3>
-                <div class="range-slider__inputs">
-                  <label class="range-slider__label">
-                    <input type="numder" class="range-slider__input" id="input-price" min="350000" max="3000000">
-                  </label>
+              <div class="calculator__container">
+                <div class="range-slider">
+                  <h3 class="range-slider__title">Рыночная стоимость автомобиля</h3>
+                  <div class="range-slider__inputs">
+                    <label class="range-slider__label">
+                      <input type="numder" class="range-slider__input" id="input-price" min="350000" max="3000000">
+                    </label>
+                  </div>
+                  <div class="range-slider__slider" id="range-slider-price"></div>
+                  <div class="range-slider__legend">
+                    <span>350 000 ₽</span>
+                    <span>3 000 000 ₽</span>
+                  </div>
                 </div>
-                <div class="range-slider__slider" id="range-slider-price"></div>
-                <div class="range-slider__legend">
-                  <span>350 000 ₽</span>
-                  <span>3 000 000 ₽</span>
+
+                <div class="range-slider">
+                  <h3 class="range-slider__title">Срок займа</h3>
+                  <div class="range-slider__inputs">
+                    <label class="range-slider__label">
+                      <input type="numder" class="range-slider__input" id="input-month" min="1" max="36">
+                    </label>
+                  </div>
+                  <div class="range-slider__slider" id="range-slider-month"></div>
+                  <div class="range-slider__legend">
+                    <span>1 месяц</span>
+                    <span>36 месяцев</span>
+                  </div>
+                </div>
+
+                <div class="range-slider range-slider--mb">
+                  <h3 class="range-slider__title">Ежемесячный платёж</h3>
+                  <div class="range-slider__inputs">
+                    <label class="range-slider__label">
+                      <input type="numder" class="range-slider__input" id="input-payment" min="50000" max="200000">
+                    </label>
+                  </div>
+                  <div class="range-slider__slider" id="range-slider-payment"></div>
                 </div>
               </div>
 
-              <div class="range-slider">
-                <h3 class="range-slider__title">Срок займа</h3>
-                <div class="range-slider__inputs">
-                  <label class="range-slider__label">
-                    <input type="numder" class="range-slider__input" id="input-month" min="1" max="36">
-                  </label>
-                </div>
-                <div class="range-slider__slider" id="range-slider-month"></div>
-                <div class="range-slider__legend">
-                  <span>1 месяц</span>
-                  <span>36 месяцев</span>
-                </div>
-              </div>
+              <div class="calculator__container">
+                <div class="calculator__input-container">
+                  <div class="calculator__input-block">
+                    <h3 class="calculator__input-title">Оценочная сумма процентов</h3>
+                    <label class="calculator__input-label">
+                      <input type="numder" class="calculator__input" min="0" max="100" value="10650">
+                    </label>
+                  </div>
 
-              <div class="range-slider range-slider--mb">
-                <h3 class="range-slider__title">Ежемесячный платёж</h3>
-                <div class="range-slider__inputs">
-                  <label class="range-slider__label">
-                    <input type="numder" class="range-slider__input" id="input-payment" min="50000" max="200000">
-                  </label>
-                </div>
-                <div class="range-slider__slider" id="range-slider-payment"></div>
-              </div>
-
-              <div class="calculator__input-container">
-                <div class="calculator__input-block">
-                  <h3 class="calculator__input-title">Оценочная сумма процентов</h3>
-                  <label class="calculator__input-label">
-                    <input type="numder" class="calculator__input" min="0" max="100" value="10650">
-                  </label>
+                  <div class="calculator__input-block">
+                    <h3 class="calculator__input-title">Оценочная сумма займа</h3>
+                    <label class="calculator__input-label">
+                      <input type="numder" class="calculator__input" min="0" max="100" value="360650">
+                    </label>
+                  </div>
                 </div>
 
-                <div class="calculator__input-block">
-                  <h3 class="calculator__input-title">Оценочная сумма займа</h3>
-                  <label class="calculator__input-label">
-                    <input type="numder" class="calculator__input" min="0" max="100" value="360650">
-                  </label>
+                <div class="calculator__block">
+                  <span class="calculator__rate">
+                    Оценочная ставка: <span class="title-red">3,3%</span> в месяц
+                  </span>
+
+                  <button class="calculator__btn btn" type="button">
+                    Получить одобрение
+                  </button>
                 </div>
-              </div>
-
-              <div class="calculator__block">
-                <span class="calculator__rate">
-                  Оценочная ставка: <span class="title-red">3,3%</span> в месяц
-                </span>
-
-                <button class="calculator__btn btn" type="button">
-                  Получить одобрение
-                </button>
               </div>
 
               <ul class="calculator__functions">

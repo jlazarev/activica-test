@@ -3,6 +3,22 @@
 
   position: relative;
   overflow: hidden;
+}
+
+.loan__wrapper {
+  @include viewport--768 {
+    padding-bottom: 90px;
+  }
+
+  @include viewport--1200 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 94px;
+    padding-bottom: 118px;
+  }
+
+  padding: 20px 20px 60px;
+  position: relative;
 
   &::after {
     @include viewport--768 {
@@ -10,6 +26,14 @@
       height: 420px;
       right: -220px;
       top: 31px;
+    }
+
+    @include viewport--1200 {
+      width: 1283px;
+      height: 1283px;
+      right: auto;
+      left: 750px;
+      top: -500px;
     }
 
     content: "";
@@ -32,6 +56,14 @@
       bottom: 373px;
     }
 
+    @include viewport--1200 {
+      width: 1138px;
+      height: 641px;
+      right: auto;
+      left: 525px;
+      bottom: 380px;
+    }
+
     content: "";
     position: absolute;
     bottom: 379px;
@@ -45,18 +77,16 @@
   }
 }
 
-.loan__wrapper {
-  @include viewport--768 {
-    padding-bottom: 90px;
-  }
-
-  padding: 20px 20px 60px;
-}
-
 .loan__title {
   @include viewport--768 {
     font-size: 40px;
     margin: 27px 120px 0 0;
+  }
+
+  @include viewport--1200 {
+    font-size: 50px;
+    max-width: 800px;
+    margin-bottom: 50px;
   }
 
   margin: 0;
@@ -64,6 +94,8 @@
   font-weight: 700;
   line-height: 1.13em;
   font-size: 30px;
+  position: relative;
+  z-index: 2;
 }
 
 .loan__features {
@@ -71,13 +103,23 @@
     margin: 30px 0 39px;
   }
 
+  @include viewport--1200 {
+    margin-bottom: 60px;
+  }
+
   list-style: none;
   padding: 0;
   margin: 30px 0;
+  position: relative;
+  z-index: 2;
 
   li {
     @include viewport--768 {
       margin-right: 260px;
+    }
+
+    @include viewport--1200 {
+      max-width: 600px;
     }
 
     position: relative;
@@ -102,6 +144,12 @@
     margin-bottom: 90px;
   }
 
+  @include viewport--1200 {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 122px;
+  }
+
   margin-bottom: 292px;
 }
 
@@ -122,7 +170,8 @@
   @include viewport--768 {
     width: 300px;
     height: 219px;
-    padding: 40px 45px 38px 40px;
+    padding: 112px 45px 38px 40px;
+    align-items: flex-start;
   }
 
   background-color: $color-default-white;
@@ -141,6 +190,11 @@
   align-items: flex-end;
 
   &:last-child {
+    @include viewport--1200 {
+      margin-right: 0;
+      width: 325px;
+    }
+
     margin-right: 20px;
     background-color: $color-default-black;
     color: $color-default-white;

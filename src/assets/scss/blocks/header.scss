@@ -31,6 +31,7 @@
   justify-content: space-between;
   margin: 0 auto;
   height: 100%;
+  line-height: 32px;
 }
 
 .header__wrapper-top {
@@ -100,6 +101,7 @@
 .header__logo {
   @include viewport--768 {
     margin-left: 12px;
+    margin-top: 2px;
 
     .header__block & svg {
       width: 255px;
@@ -117,6 +119,7 @@
   }
 
   margin-left: 4px;
+  margin-top: 5px;
 
   svg {
     width: 205px;
@@ -425,12 +428,15 @@
       width: 171px;
       font-weight: 700;
       font-size: 14px;
+      margin-top: 3px;
     }
 
     @include viewport--1200 {
       margin-left: 0;
       align-self: center;
       margin-right: 13px;
+      margin-top: 0;
+      margin-bottom: 4px;
     }
 
     display: none;
