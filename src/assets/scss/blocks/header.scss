@@ -351,6 +351,7 @@
   overflow: scroll;
 
   background-color: rgba($color-default-white, 1);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 3%);
   transform: translateY(-100%);
 
   transition:
