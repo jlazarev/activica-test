@@ -11,10 +11,11 @@
 
   @include viewport--1200 {
     max-width: 1360px;
-    background-color: $color-default-white;
     margin: 0 auto;
-    border-radius: 20px;
     padding: 61px 80px 76px;
+
+    background-color: $color-default-white;
+    border-radius: 20px;
   }
 
   padding: 60px 20px;
@@ -22,24 +23,27 @@
 
 .calculator__title {
   @include viewport--768 {
+    margin: 0 0 30px;
+
     font-size: 30px;
     line-height: 120%;
-    margin: 0 0 30px;
   }
 
   @include viewport--1200 {
-    text-align: center;
+    margin-bottom: 45px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 130%;
-    margin-bottom: 45px;
+    text-align: center;
   }
+  margin: 0 0 29px;
 
-  font-family: "Georgia", sans-serif;
   font-weight: 700;
   font-size: 24px;
+
+  font-family: 'Georgia', sans-serif;
   line-height: 130%;
-  margin: 0 0 29px;
 }
 
 .calculator__container {
@@ -50,22 +54,25 @@
 }
 
 .calculator__input-title {
+  margin: 0 0 8px;
+
+  color: $color-grey;
   font-weight: 400;
   font-size: 16px;
-  color: $color-grey;
-  margin: 0 0 8px;
 }
 
 .calculator__input {
-  border: 1px solid $color-border;
-  border-radius: 10px;
-  padding: 0 24px;
   width: 100%;
   height: 60px;
   margin-bottom: 19px;
+  padding: 0 24px;
+
+  color: $color-red;
   font-weight: 600;
   font-size: 18px;
-  color: $color-red;
+
+  border: 1px solid $color-border;
+  border-radius: 10px;
 }
 
 .calculator__input-container {
@@ -102,9 +109,10 @@
 
   display: block;
   margin-bottom: 14px;
+
+  color: $color-grey;
   font-weight: 400;
   font-size: 16px;
-  color: $color-grey;
 }
 
 .calculator__block {
@@ -144,21 +152,22 @@
   }
 
   @include viewport--1200 {
-    margin-top: 9px;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
+    margin-top: 9px;
 
     .calculator__form & li {
       width: 31.2%;
       margin-bottom: 0;
     }
   }
-
-  list-style: none;
   margin: 0;
   padding: 0;
+
   font-weight: 400;
   font-size: 18px;
+
+  list-style: none;
 
   li {
     margin-bottom: 15px;
@@ -174,10 +183,11 @@
   }
 
   span {
-    color: $color-grey;
-    margin-left: 10px;
     display: block;
+    margin-left: 10px;
     padding: 2px 0;
+
+    color: $color-grey;
 
     border-bottom: 1px dashed $color-grey;
   }

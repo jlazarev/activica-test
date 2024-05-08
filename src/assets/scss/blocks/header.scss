@@ -21,7 +21,6 @@
 }
 
 .header__wrapper {
-
   @include viewport--1200 {
     padding: 0;
   }
@@ -29,8 +28,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   height: 100%;
+  margin: 0 auto;
+
   line-height: 32px;
 }
 
@@ -61,28 +61,30 @@
     display: block;
   }
 
-  width: 100%;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03);
-
   display: none;
+
+  width: 100%;
+
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 3%);
 }
 
 .header__top-menu {
   display: flex;
-  list-style: none;
-  padding: 11px 20px 14px;
-  margin: 0 auto;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
   max-width: 1400px;
+  margin: 0 auto;
+  padding: 11px 20px 14px;
+
+  list-style: none;
 }
 
 .header__top-menu-link {
-  text-transform: uppercase;
+  color: $color-grey;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
-  color: $color-grey
+  text-transform: uppercase;
 }
 
 .header__block {
@@ -91,17 +93,17 @@
   }
 
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 1400px;
   padding: 18px 0 14px;
-  align-items: center;
 }
 
 .header__logo {
   @include viewport--768 {
-    margin-left: 12px;
     margin-top: 2px;
+    margin-left: 12px;
 
     .header__block & svg {
       width: 255px;
@@ -117,9 +119,9 @@
       height: 51px;
     }
   }
+  margin-top: 5px;
 
   margin-left: 4px;
-  margin-top: 5px;
 
   svg {
     width: 205px;
@@ -143,17 +145,19 @@
 }
 
 .header__location-discription {
+  display: block;
+  margin-bottom: 4px;
+
+  color: $color-grey;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
-  color: $color-grey;
-  display: block;
-  margin-bottom: 4px;
 }
 
 .header__location-address {
   display: flex;
   align-items: center;
+
   font-weight: 600;
   font-size: 14px;
   line-height: 110%;
@@ -194,13 +198,15 @@
 }
 
 .header__phone-callback {
+  padding: 3px 0;
+
+  color: $color-grey;
+  font-weight: 400;
+  font-size: 14px;
+
   background-color: transparent;
   border: none;
   border-bottom: 1px dotted $color-grey;
-  font-weight: 400;
-  font-size: 14px;
-  color: $color-grey;
-  padding: 3px 0;
 }
 
 .header__menu-btn {
@@ -217,9 +223,9 @@
 
   width: 40px;
   height: 40px;
-  padding: 0;
   margin-right: 4px;
   margin-bottom: 4px;
+  padding: 0;
 
   background-color: transparent;
   border: none;
@@ -243,7 +249,7 @@
     height: 2px;
     margin: auto 0;
 
-    background-color: #292D32;
+    background-color: #292d32;
     opacity: 1;
 
     transition: opacity 0.5s;
@@ -293,7 +299,7 @@
   height: 2px;
   margin: auto;
 
-  background-color: #292D32;
+  background-color: #292d32;
   opacity: 1;
 }
 
@@ -307,11 +313,11 @@
 
 .header__menu {
   @include viewport--768 {
-    padding: 28px 20px 40px;
     top: 91px;
     left: auto;
 
     width: 100%;
+    padding: 28px 20px 40px;
   }
 
   @include viewport--1200 {
@@ -343,7 +349,6 @@
   max-height: calc(100vh - 80px);
   padding: 20px 17px 40px;
   overflow: scroll;
-
 
   background-color: rgba($color-default-white, 1);
   transform: translateY(-100%);
@@ -399,15 +404,15 @@
 .header__menu-request {
   @include viewport--768 {
     width: 171px;
-    margin-left: 90px;
     margin-bottom: 0;
+    margin-left: 90px;
   }
 
   @include viewport--1200 {
     width: auto;
-    padding: 0 20px;
     margin-right: 12px;
     margin-left: 90px;
+    padding: 0 20px;
 
     span {
       display: none;
@@ -415,28 +420,28 @@
   }
 
   flex-shrink: 0;
-  background-color: $color-red;
+
   color: $color-default-white;
+
+  background-color: $color-red;
 
   .header__block & {
     @include viewport--768 {
       display: block;
-      height: 51px;
       align-self: flex-start;
-      margin-left: auto;
-      margin-right: 40px;
       width: 171px;
+      height: 51px;
+      margin-top: 3px;
+      margin-right: 40px;
+      margin-left: auto;
+
       font-weight: 700;
       font-size: 14px;
-      margin-top: 3px;
     }
 
     @include viewport--1200 {
-      margin-left: 0;
       align-self: center;
-      margin-right: 13px;
-      margin-top: 0;
-      margin-bottom: 4px;
+      margin: 0 13px 4px 0;
     }
 
     display: none;
@@ -448,12 +453,12 @@
   align-items: center;
   height: 44px;
   margin-bottom: 22px;
-  text-transform: uppercase;
+
+  color: $color-grey;
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
-
-  color: $color-grey;
+  text-transform: uppercase;
 
   transition: all 0.3s;
 

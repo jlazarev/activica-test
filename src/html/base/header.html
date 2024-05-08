@@ -18,7 +18,10 @@
       <div class="header__block">
         <a
           class="header__logo"
-          @@if (!context.main) {href="index.html"}
+          @@if
+          (!context.main)
+          {href="index.html"
+          }
           aria-label="Переход на главную"
         >
           <svg
@@ -33,7 +36,9 @@
         </a>
 
         <div class="header__location header__location--top">
-          <span class="header__location-discription">Займы на лучших условиях в Санкт-Петербурге</span>
+          <span class="header__location-discription"
+            >Займы на лучших условиях в Санкт-Петербурге</span
+          >
 
           <div class="header__location-address">
             <svg
@@ -53,14 +58,10 @@
         <div class="header__phone-block header__phone-block--top">
           <span class="header__phone-number">+7 (812) 416-42-16</span>
 
-          <button class="header__phone-callback" type="button">
-            Заказать обратный звонок
-          </button>
+          <button class="header__phone-callback" type="button">Заказать обратный звонок</button>
         </div>
 
-        <button class="header__menu-request btn link-popup" type="button">
-          Оставить заявку
-        </button>
+        <button class="header__menu-request btn link-popup" type="button">Оставить заявку</button>
 
         <button class="header__menu-btn" type="button" aria-label="меню">
           <div class="header__menu-top-line"></div>
@@ -83,7 +84,9 @@
       </ul>
 
       <div class="header__location">
-        <span class="header__location-discription">Займы на лучших условиях в Санкт-Петербурге</span>
+        <span class="header__location-discription"
+          >Займы на лучших условиях в Санкт-Петербурге</span
+        >
 
         <div class="header__location-address">
           <svg
@@ -104,14 +107,10 @@
         <div class="header__phone-block">
           <span class="header__phone-number">+7 (812) 416-42-16</span>
 
-          <button class="header__phone-callback" type="button">
-            Заказать обратный звонок
-          </button>
+          <button class="header__phone-callback" type="button">Заказать обратный звонок</button>
         </div>
 
-        <button class="header__menu-request btn link-popup" type="button">
-          Оставить заявку
-        </button>
+        <button class="header__menu-request btn link-popup" type="button">Оставить заявку</button>
       </div>
     </div>
   </div>

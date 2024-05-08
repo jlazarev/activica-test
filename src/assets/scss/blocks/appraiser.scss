@@ -14,51 +14,58 @@
   @include viewport--768 {
     padding: 40px 130px 391px 40px;
   }
+  position: relative;
+
+  padding: 20px;
+  padding-bottom: 253px;
+  overflow: hidden;
 
   background-color: $color-grey-light;
   border-radius: 20px;
-  padding: 20px;
-  padding-bottom: 253px;
-  position: relative;
-  overflow: hidden;
 
   &::after {
     @include viewport--768 {
-      width: 544px;
-      height: 544px;
       bottom: -195px;
       left: -53px;
-    }
 
-    content: "";
+      width: 544px;
+      height: 544px;
+    }
     position: absolute;
-    background-color: $color-red;
-    width: 297px;
-    height: 297px;
-    border-radius: 50%;
     bottom: -74px;
     left: -54px;
     z-index: 0;
+
+    width: 297px;
+    height: 297px;
+
+    background-color: $color-red;
+    border-radius: 50%;
+
+    content: '';
   }
 
   &::before {
     @include viewport--768 {
-      width: 448px;
-      height: 261px;
       bottom: 48px;
       left: 104px;
-    }
 
-    content: "";
+      width: 448px;
+      height: 261px;
+    }
     position: absolute;
     bottom: 22px;
     left: 43px;
+    z-index: 1;
+
     width: 277px;
     height: 172px;
-    background-image: url("../img/bg/bg-auto2.png");
-    background-size: 100%;
+
+    background-image: url('../img/bg/bg-auto2.png');
     background-repeat: no-repeat;
-    z-index: 1;
+    background-size: 100%;
+
+    content: '';
   }
 }
 
@@ -68,21 +75,23 @@
     font-size: 30px;
     line-height: 120%;
   }
-
-  font-family: "Georgia", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 122%;
   margin: 0;
   margin-bottom: 31px;
+
+  font-weight: 700;
+  font-size: 24px;
+
+  font-family: 'Georgia', sans-serif;
+  line-height: 122%;
 }
 
 .appraiser__paragraph {
+  margin-bottom: 15px;
+
+  color: $color-grey;
   font-weight: 400;
   font-size: 18px;
   line-height: 128%;
-  color: $color-grey;
-  margin-bottom: 15px;
   letter-spacing: -0.004em;
 }
 
