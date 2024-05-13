@@ -10,16 +10,21 @@ if (sliderPrice) {
       min: 350000,
       max: 3000000,
     },
+    format: wNumb({
+      decimals: 0,
+      thousand: ' ',
+      suffix: ' ₽',
+    }),
   });
 
   const inputPrice = document.getElementById('input-price');
 
   sliderPrice.noUiSlider.on('update', function (values, handle) {
-    inputPrice.value = Math.round(values);
+    inputPrice.value = values[handle];
   });
 
-  inputPrice.addEventListener('change', () => {
-    sliderPrice.noUiSlider.set(inputPrice.value);
+  inputPrice.addEventListener('change', function () {
+    sliderPrice.noUiSlider.set(this.value);
   });
 }
 
@@ -35,16 +40,21 @@ if (sliderMonth) {
       min: 1,
       max: 36,
     },
+    format: wNumb({
+      decimals: 0,
+      thousand: '',
+      suffix: ' месяц',
+    }),
   });
 
   const inputMonth = document.getElementById('input-month');
 
   sliderMonth.noUiSlider.on('update', function (values, handle) {
-    inputMonth.value = Math.round(values);
+    inputMonth.value = values[handle];
   });
 
-  inputMonth.addEventListener('change', () => {
-    sliderMonth.noUiSlider.set(inputMonth.value);
+  inputMonth.addEventListener('change', function () {
+    sliderMonth.noUiSlider.set(this.value);
   });
 }
 
@@ -60,15 +70,20 @@ if (sliderPayment) {
       min: 50000,
       max: 200000,
     },
+    format: wNumb({
+      decimals: 0,
+      thousand: ' ',
+      suffix: ' ₽',
+    }),
   });
 
   const inputPayment = document.getElementById('input-payment');
 
   sliderPayment.noUiSlider.on('update', function (values, handle) {
-    inputPayment.value = Math.round(values);
+    inputPayment.value = values[handle];
   });
 
-  inputPayment.addEventListener('change', () => {
-    sliderPayment.noUiSlider.set(inputPayment.value);
+  inputPayment.addEventListener('change', function () {
+    sliderPayment.noUiSlider.set(this.value);
   });
 }
